@@ -23,7 +23,7 @@ pcb = pcb - hole1 - hole2 - hole3 - hole4
 # Add Company Label on PCB: "Solid Stones"
 # Placed in the center of the board, using white text with a small font.
 company_label = translate([board_length/2-2, board_width/2 - 7, board_thickness + 0.3])(
-    color("black")(linear_extrude(height=0.3)(text("Solid Stones", size=2.5, halign="center")))
+    color("black")(linear_extrude(height=0.3)(text("Solid Rocks", size=2.5, halign="center")))
 )
 
 # ==============================================================
@@ -151,7 +151,7 @@ traces = trace1 + trace2
 
 sensor_module = union()(
     pcb,
-    company_label,  # Board label with company name "Solid Stones"
+    company_label,  # Board label with company name "Solid Rocks"
     microchip, microchip_label,
     wifi_module, wifi_label,
     coin_cell, battery_label,
